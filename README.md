@@ -19,6 +19,7 @@ Customer Commute
 Customer Age Brackets
 
 Key findings
+
 Segment	Purchase rate
 Overall	48.1% Yes / 51.9% No
 Commute 2–5 miles	58.6%
