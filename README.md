@@ -1,51 +1,60 @@
-# bike-buyers-excel-analytics
-Excel data cleaning, pivot table, and dashboard project on a 1,000-record customer dataset
-Bike Buyers Customer Analytics (Excel)
+# Bike Buyers Customer Analytics (Excel)
 
-An end-to-end Excel analytics project: cleaning a raw customer dataset, engineering a segmentation field, building a PivotTable, and designing a dashboard to answer a core business question — which customer profiles are most likely to purchase a bike?
+An end-to-end Excel analytics project: cleaning a raw customer dataset, engineering a segmentation field, building a PivotTable, and designing a dashboard to answer a core business question — **which customer profiles are most likely to purchase a bike?**
 
-Dataset
-Source sheet: bike_buyers (raw data, 1,026 rows)
-Working sheet: Working Sheet (1,000 cleaned rows used for analysis)
-Fields: ID, Marital Status, Gender, Income, Children, Education, Occupation, Home Owner, Cars, Commute Distance, Region, Age, Purchased Bike
-What I did
+## Dataset
 
-Data cleaning — standardized categorical values (e.g. M/S → Married/Single, M/F → Male/Female) and removed rows with inconsistent or missing entries, taking the raw set from 1,026 to 1,000 clean records.
-Feature engineering — created an Age Brackets column (Adolescent / Middle Age / Old) to make purchase behavior easier to segment and compare.
-PivotTable analysis — built a PivotTable showing average income by gender, cross-tabbed against purchase outcome (Yes/No).
-Dashboard — assembled a one-page dashboard with three charts:
-Avg Income Per Purchase
-Customer Commute
-Customer Age Brackets
+- **Source sheet:** `bike_buyers` (raw data, 1,026 rows)
+- **Working sheet:** `Working Sheet` (1,000 cleaned rows used for analysis)
+- **Fields:** ID, Marital Status, Gender, Income, Children, Education, Occupation, Home Owner, Cars, Commute Distance, Region, Age, Purchased Bike
 
-Key findings
+## What I did
 
-Segment	Purchase rate
-Overall	48.1% Yes / 51.9% No
-Commute 2–5 miles	58.6%
-Commute 10+ miles	29.7%
-Middle Age bracket	54.6%
-Old bracket	31.2%
-Pacific region	58.9%
-Europe region	49.3%
-North America region	43.3%
+1. **Data cleaning** — standardized categorical values (e.g. `M`/`S` → `Married`/`Single`, `M`/`F` → `Male`/`Female`) and removed rows with inconsistent or missing entries, taking the raw set from 1,026 to 1,000 clean records.
+2. **Feature engineering** — created an `Age Brackets` column (Adolescent / Middle Age / Old) to make purchase behavior easier to segment and compare.
+3. **PivotTable analysis** — built a PivotTable showing **average income by gender, cross-tabbed against purchase outcome** (Yes/No).
+4. **Dashboard** — assembled a one-page dashboard with three charts:
+   - *Avg Income Per Purchase*
+   - *Customer Commute*
+   - *Customer Age Brackets*
 
-Takeaways:
+## Key findings
 
-Commute distance is one of the strongest behavioral signals — customers close to their commute hub convert far better than long-distance commuters, likely reflecting bikes as a practical transport choice rather than a leisure purchase.
-Middle-aged customers are the strongest-converting age segment by a wide margin.
-Regional differences are meaningful (Pacific vs. North America is a ~15-point gap), suggesting region-specific marketing could outperform a one-size-fits-all approach.
+| Segment | Purchase rate |
+|---|---|
+| Overall | 48.1% Yes / 51.9% No |
+| Commute 2–5 miles | 58.6% |
+| Commute 10+ miles | 29.7% |
+| Middle Age bracket | 54.6% |
+| Old bracket | 31.2% |
+| Pacific region | 58.9% |
+| Europe region | 49.3% |
+| North America region | 43.3% |
 
-(Average income by gender/purchase-outcome is available in the PivotTable but wasn't a primary driver of purchase behavior in this dataset — worth noting as a "checked, not a strong signal" finding.)
+**Takeaways:**
+- Overall bike purchase rate: 48.1% Yes vs. 51.9% No
+- Purchase rate was highest among customers living just 2–5 miles from work/study (58.6%) and dropped sharply for those commuting 10+ miles (29.7%)
+- Middle-aged customers converted at nearly double the rate of older customers (54.6% vs. 31.2%)
+- The Pacific region outperformed Europe and North America in purchase rate (58.9%)
+- Commute distance is one of the strongest behavioral signals — customers close to their commute hub convert far better than long-distance commuters, likely reflecting bikes as a practical transport choice rather than a leisure purchase.
+- Middle-aged customers are the strongest-converting age segment by a wide margin.
+- Regional differences are meaningful (Pacific vs. North America is a ~15-point gap), suggesting region-specific marketing could outperform a one-size-fits-all approach.
 
-Tools
-Microsoft Excel — data cleaning, PivotTable, native chart objects
-No external BI tool used; all analysis and visualization built natively in the workbook
+*(Average income by gender/purchase-outcome is available in the PivotTable but wasn't a primary driver of purchase behavior in this dataset — worth noting as a "checked, not a strong signal" finding.)*
 
-Repo structure
+## Tools
+
+- Microsoft Excel — data cleaning, PivotTable, native chart objects
+- No external BI tool used; all analysis and visualization built natively in the workbook
+
+## Repo structure
+
+```
 ├── bike_buyers_excel_project.xlsx   # Full workbook (raw data, working sheet, pivot table, dashboard)
 ├── images/
 │   ├── dashboard.png                # Screenshot of the Dashboard tab
 │   └── pivot_table.png              # Screenshot of the PivotTable tab
 └── README.md
+```
+
 
